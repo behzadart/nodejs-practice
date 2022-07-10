@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <header>
+    </header>
+    <div class="container">
+        <h1>this is a Nodejs. todo app</h1>
+        <p>you can manage daily task by this app</p>
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="newTodo">Add Todo</label>
+                        <input type="text" class="form-control" id="newTodo" placeholder="what you are going to do...">
+                    </div>
+                    <button class="btn btn-success">Add</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- data table -->
+        <div class="row" style="margin-top: 20px;">
+            <div class="col">
+                <table class="table table-striped" id="todo-table">
+                    <tbody>
+                        <tr v-for="todo in todos">
+                            <td>{{todo.text}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- scripts -->
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../libs/vue/vue.min.js"></script>
+
+    <script>
+        var model = new vue({
+            el: '#todo-table',
+            data: {
+                todos: [{
+                    text: 'todo one'
+                }, {
+                    text: 'todo two'
+                }]
+            }
+        })
+    </script>
+</body>
+
+</html>

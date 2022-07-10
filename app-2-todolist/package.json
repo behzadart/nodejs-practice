@@ -1,0 +1,17 @@
+{
+  "name": "first-app",
+  "version": "1.0.0",
+  "description": "this is the first app",
+  "main": "app.js",
+  "dependencies": {
+    "cls": "^0.1.5",
+    "express": "^4.18.1",
+    "vash": "^0.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "behzad afsari",
+  "license": "ISC"
+}
